@@ -71,7 +71,30 @@ IronForge-Fitness/
     └── hooks/                  # Custom React hooks
         ├── useInView.js        # Viewport intersection observer
         └── useCountUp.js       # Animated stat counter logic
-🚀 Getting StartedFollow these steps to set up and run the project locally on your machine:PrerequisitesNode.js 18.0.0 or highernpm (Package Manager)Local Setup InstructionsNavigate to the project root:Bashcd "Gym website"
-Install project dependencies:Bashnpm install
-Start the development server:Bashnpm run dev
-Open in browser:Navigate to http://localhost:5173 to view the application live.⚡ Available NPM ScriptsCommandActionnpm run devStarts the Vite local development server with HMRnpm run buildCompiles and optimizes assets into the dist/ directory for productionnpm run previewRuns a local web server to preview the production buildnpm run lintScans codebase for errors and code-style compliance using ESLint📌 Development Notes💡 Case-Sensitivity Warning:This project adheres strictly to UNIX-compliant case sensitivity. The component directory is structured as src/component/ (singular). Ensure all module imports retain accurate file name casing to prevent build failures across cross-platform environment builds.Made with 💪 for IronForge Fitness. Designed & Developed for peak performance.
+
+🚀 Getting Started
+Follow these steps to set up and run the project locally on your machine:
+Prerequisites
+Node.js 18.0.0 or higher
+npm (Package Manager)
+Local Setup Instructions
+Navigate to the project root:
+Bash
+
+cd "Gym website"
+Install project dependencies:
+Bash
+
+npm install
+Start the development server:
+Bash
+
+npm run dev
+Open in browser:
+Navigate to http://localhost:5173 to view the application live.
+⚡ Available NPM Scripts
+CommandActionnpm run devStarts the Vite local development server with HMRnpm run buildCompiles and optimizes assets into the dist/ directory for productionnpm run previewRuns a local web server to preview the production buildnpm run lintScans codebase for errors and code-style compliance using ESLint
+📌 Development Notes
+💡 Case-Sensitivity Warning:
+This project adheres strictly to UNIX-compliant case sensitivity. The component directory is structured as src/component/ (singular). Ensure all module imports retain accurate file name casing to prevent build failures across cross-platform environment builds.
+Made with 💪 for IronForge Fitness. Designed & Developed for peak performance.
