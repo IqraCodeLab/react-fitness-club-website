@@ -1,175 +1,77 @@
-# IronForge Fitness 🏋️
+# 🏋️‍♂️ IronForge Fitness — Forge Your Strongest Self
 
-Premium gym & fitness website — **IronForge Fitness | Forge Your Strongest Self**. A fully responsive React + Vite web app featuring strength training, CrossFit, HIIT, personal training programs, member testimonials, gallery, membership plans, BMI calculator, blog and more.
+![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![Vite](https://img.shields.io/badge/Vite-8-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![React Router](https://img.shields.io/badge/React_Router-v7-CA4245?style=for-the-badge&logo=reactrouter&logoColor=white)
 
----
-
-## ✨ Features
-
-- **Modern UI** — dark, bold fitness theme built with Tailwind CSS v4
-- **Routing** — multi-page app with `react-router-dom` (Home, About, Programs, Trainers, Membership, Schedule, Blog + Blog Details, Gallery, Contact, 404)
-- **Interactive components**
-  - Animated reveal on scroll (`Reveal`, `useInView` hook)
-  - Count-up statistics (`CounterSection`, `useCountUp` hook)
-  - BMI calculator (`BMISection`)
-  - Membership plan modal (`PlanModal`)
-  - Gallery with category filtering
-  - Back-to-top button, scroll-to-top on route change
-- **Data-driven** — all content handled via central data file (`src/data/data.js`)
-- **Fully responsive** — mobile + desktop layouts
-- **Reusable components** — 30+ modular components in `src/component/`
+A high-performance, fully responsive, and feature-packed web application built for **IronForge Fitness**. Designed with a bold dark fitness aesthetic, smooth micro-interactions, custom hooks, and dynamic route rendering to deliver a seamless user experience across all devices.
 
 ---
 
-## 🛠 Tech Stack
+## 🔥 Key Highlights & Features
 
-| Layer     | Technology                              |
-| --------- | --------------------------------------- |
-| Framework | React 19 (Vite 8)                        |
-| Language  | JavaScript (JSX)                         |
-| Styling   | Tailwind CSS v4 + custom CSS             |
-| Routing   | React Router v7                          |
-| Linting   | ESLint (+ react-hooks, react-refresh)    |
+### 🌐 Multi-Page Experience & Routing
+- Powered by `react-router-dom` (v7) with automatic scroll-to-top on route changes.
+- **12+ Specialized Pages:** Home, About Us, Programs, Trainers, Membership Tiers, Workout Schedule, Blog, Blog Post Details, Photo Gallery, Contact Us, and Custom 404 Error handling.
+
+### ⚡ Interactive & Dynamic UI Components
+- **BMI Calculator (`BMISection`):** Real-time interactive Body Mass Index calculation tool with instant feedback.
+- **Animated Counter Statistics (`CounterSection`):** Custom numbers count-up triggered when scrolled into view.
+- **Scroll Reveal Animations (`Reveal`):** Custom observer-based animation wrapper for smooth section entry.
+- **Membership Plan Modal (`PlanModal`):** Interactive popup modal for detailed plan specifications and registration prompts.
+- **Filterable Media Gallery:** Dynamic category-based image filtering (e.g., Strength, Cardio, Facilities).
+
+### 🛠️ Architecture & Technical Highlights
+- **Centralized Data Model (`src/data/data.js`):** Fully data-driven design allowing easy updates to site content, trainer details, schedules, and pricing without touching UI logic.
+- **Custom React Hooks:** 
+  - `useInView`: Lightweight Intersection Observer hook for scroll animations.
+  - `useCountUp`: Smooth numerical increments for statistical callouts.
+- **Modular Component Design:** 30+ reusable, single-responsibility components in `src/component/`.
+- **Responsive & Modern Styling:** Engineered with Tailwind CSS v4 featuring high-contrast red accents, dark modern aesthetic, and fluid typography.
 
 ---
 
-## 📁 Project Structure
+## 🛠️ Tech Stack
 
-```
-├── index.html                 # Entry HTML (loads /src/main.jsx)
-├── package.json
-├── vite.config.js
-├── eslint.config.js
-├── public/                    # Static assets (favicon)
+| Domain | Technology / Library | Description |
+| :--- | :--- | :--- |
+| **Framework** | React 19 | Modern component-based architecture |
+| **Build Tool** | Vite 8 | Ultra-fast HMR and optimized production bundling |
+| **Styling** | Tailwind CSS v4 | Utility-first styling with custom dark theme design |
+| **Routing** | React Router v7 | Seamless client-side navigation |
+| **Code Quality** | ESLint | Code formatting and React hooks rules enforcement |
+
+---
+
+## 📁 Project Architecture
+
+```text
+IronForge-Fitness/
+├── index.html                  # Main entry document
+├── package.json                # Project dependencies & scripts
+├── vite.config.js              # Vite configuration
+├── eslint.config.js            # Linting standards setup
+├── public/                     # Static resources & favicon
 └── src/
-    ├── main.jsx               # React entry point
-    ├── App.jsx                # Routes & layout
-    ├── index.css              # Global styles / Tailwind
-    ├── App.css
-    ├── assets/                # Images (hero, etc.)
-    ├── component/             # Reusable UI components (36 files)
-    ├── pages/                 # Page components (12 pages)
+    ├── main.jsx                # Application root entry point
+    ├── App.jsx                 # Route definitions & global layout wrappers
+    ├── index.css               # Tailwind directives & global utility overrides
+    ├── App.css                 # Custom scoped styling
+    ├── assets/                 # Optimized images & graphics
+    ├── component/              # 30+ Reusable UI components
+    │   ├── BMISection.jsx
+    │   ├── CounterSection.jsx
+    │   ├── PlanModal.jsx
+    │   ├── Reveal.jsx
+    │   └── ScrollToTop.jsx
+    ├── pages/                  # Top-level page views (12 distinct pages)
     ├── data/
-    │   └── data.js            # Central content/data file
-    └── hooks/
-        ├── useInView.js       # Scroll-reveal hook
-        └── useCountUp.js      # Count-up animation hook
-```
-
----
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-- [Node.js](https://nodejs.org/) **18+** (LTS recommended)
-- npm (comes with Node.js)
-
-### Installation
-
-```bash
-# 1. Clone the repo
-git clone https://github.com/<your-username>/<your-repo>.git
-cd <your-repo>
-
-# 2. Install dependencies
-npm install
-
-# 3. Start dev server
-npm run dev
-
-# 4. Build for production
-npm run build
-
-# 5. Preview production build locally
-npm run preview
-```
-
-Your dev server runs at `http://localhost:5173` by default.
-
----
-
-## ✅ Scripts
-
-| Command          | Description                         |
-| ---------------- | ----------------------------------- |
-| `npm run dev`    | Start Vite dev server               |
-| `npm run build`  | Build production bundle to `dist/`  |
-| `npm run preview`| Serve the production build          |
-| `npm run lint`   | Run ESLint                          |
-
----
-
-## 🌍 Deploy to Vercel
-
-### Option A — Vercel Dashboard (recommended)
-
-1. Push the project to **GitHub** first (steps below).
-2. Go to [vercel.com](https://vercel.com) → **Add New Project** → import your GitHub repo.
-3. Vercel auto-detects **Vite** — framework preset will be `Vite`.
-4. Keep default settings:
-   - **Build Command:** `npm run build`
-   - **Output Directory:** `dist`
-5. Click **Deploy**. Your site goes live immediately and auto-rebuilds on every push.
-
-### Option B — Vercel CLI
-
-```bash
-npm i -g vercel
-vercel           # deploy to preview
-vercel --prod    # deploy to production
-```
-
----
-
-## 🐙 Push to GitHub
-
-```bash
-# 1. Create a repo on github.com (do NOT add a README there)
-
-# 2. In this project folder:
-git init
-git add .
-git commit -m "Initial commit - IronForge Fitness"
-
-# 3. Link & push
-git remote add origin https://github.com/<your-username>/<your-repo>.git
-git branch -M main
-git push -u origin main
-```
-
-> 💡 Tip: `dist/` and `node_modules/` are already ignored — a `.gitignore` is included.
-
----
-
-## ⚠️ Important: Case-Sensitive Paths (Linux / Vercel)
-
-Vercel builds run on **Linux**, where file paths are **case-sensitive** (unlike Windows).
-
-- The components folder is **`src/component/`** (singular) — all imports must use `component`, **never** `components`.
-- All file names in imports must match exact casing (e.g. `./component/ScrollToTop`, `../pages/Home`).
-- This project already follows the correct casing, so it builds cleanly.
-
----
-
-## 📦 Production Build Output
-
-Run `npm run build` — an optimized bundle is generated in:
-
-```
-dist/
-├── index.html
-└── assets/
-    ├── index-*.js
-    └── index-*.css
-```
-
----
-
-## 📄 License
-
-This is a private demo project. No license is specified — reuse at your own discretion.
-
----
-
-Made with ❤️ for forge-worthy athletes. 💪
+    │   └── data.js             # Centralized project data store
+    └── hooks/                  # Custom React hooks
+        ├── useInView.js        # Viewport intersection observer
+        └── useCountUp.js       # Animated stat counter logic
+🚀 Getting StartedFollow these steps to set up and run the project locally on your machine:PrerequisitesNode.js 18.0.0 or highernpm (Package Manager)Local Setup InstructionsNavigate to the project root:Bashcd "Gym website"
+Install project dependencies:Bashnpm install
+Start the development server:Bashnpm run dev
+Open in browser:Navigate to http://localhost:5173 to view the application live.⚡ Available NPM ScriptsCommandActionnpm run devStarts the Vite local development server with HMRnpm run buildCompiles and optimizes assets into the dist/ directory for productionnpm run previewRuns a local web server to preview the production buildnpm run lintScans codebase for errors and code-style compliance using ESLint📌 Development Notes💡 Case-Sensitivity Warning:This project adheres strictly to UNIX-compliant case sensitivity. The component directory is structured as src/component/ (singular). Ensure all module imports retain accurate file name casing to prevent build failures across cross-platform environment builds.Made with 💪 for IronForge Fitness. Designed & Developed for peak performance.
